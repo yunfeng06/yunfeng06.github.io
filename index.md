@@ -1,37 +1,149 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/yunfeng06/yunfeng06.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<head>
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
 
-### Markdown
+<body>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<p class="style1">小杜的网站~（更新中）</p>
+<table style="width: 90%; height: 172px" align="center">
+	<tr>
+		<td class="style1" style="height: 34px; width: 492px;">电脑软件</td>
+		<td class="style1" style="height: 34px">手机软件</td>
+	</tr>
+	<tr>
+		<td class="style1" style="width: 492px"><br />
+		聊天社交：<br />
+		<br />
+		<a href="https://im.qq.com/pcqq">QQ</a><br />
+		<br />
+		<a href="https://weixin.qq.com/">微信</a><br />
+		<br />
+		<a href="https://page.dingtalk.com/wow/z/dingtalk/default/dddownload-index?from=zebra:offline">
+		钉钉</a><br />
+		<br />
+		<a href="https://meeting.tencent.com/download-center.html">腾讯会议</a></td>
+		<td class="style1"><br />
+		聊天社交：<br />
+		<br />
+		<a href="https://im.qq.com/immobile/android/?_wv=1025">QQ</a><br />
+		<br />
+		<a href="https://weixin.qq.com/">微信</a><br />
+		<br />
+		<a href="https://www.dingtalk.com/download?source=xiazai&amp;lwfrom=201712020209206421074228702&amp;bd_vid=11253372388549118509">
+		钉钉</a><br />
+		<br />
+		腾讯会议</td>
+	</tr>
+	<tr>
+		<td class="style1" style="width: 492px"><br />
+		视频剪辑：<br />
+		<br />
+		<a href="http://bcut.drawyoo.com/">必剪</a><br />
+		<br />
+		<a href="https://lv.ulikecam.com/?_s=4">剪映</a><br />
+		<br />
+		</td>
+		<td class="style1"><br />
+		视频剪辑：<br />
+		<br />
+		<a href="http://bcut.drawyoo.com/">必剪</a><br />
+		<br />
+		<a href="https://lv.ulikecam.com/">剪映</a><br />
+		<br />
+		</td>
+	</tr>
+	<tr>
+		<td class="style1" style="width: 492px"><br />
+		应用市场：<br />
+		<br />
+		<a href="https://appgallery.huawei.com/Featured">华为应用市场</a> 网页版<br />
+		（客户端下载在右上角）</td>
+		<td class="style1"><br />
+		应用市场：<br />
+		<br />
+		<a href="https://consumer.huawei.com/cn/mobileservices/appgallery/">
+		华为应用市场</a> 网页版<br />
+		</td>
+	</tr>
+	<tr>
+		<td class="style1" style="width: 492px"><br />
+		音乐：<br />
+		<br />
+		<a href="https://y.qq.com/">QQ音乐</a><br />
+		<br />
+		<a href="https://music.163.com/">网易云音乐</a><br />
+		<br />
+		<a href="https://www.missevan.com/">猫耳FM</a><br />
+		<br />
+		<a href="http://www.kuwo.cn/">酷我音乐</a><br />
+		<br />
+		<a href="https://www.kugou.com/">酷狗音乐</a><br />
+		<br />
+		<a href="https://www.ximalaya.com/">喜马拉雅</a><br />
+		<br />
+		</td>
+		<td class="style1"><br />
+		音乐：<br />
+		<br />
+		<a href="https://i.y.qq.com/n2/m/">QQ音乐</a><br />
+		<br />
+		<a href="https://y.music.163.com/m/">网易云音乐</a><br />
+		<br />
+		<a href="https://m.missevan.com/">猫耳FM</a><br />
+		<br />
+		<a href="http://m.kuwo.cn/newh5app/">酷我音乐</a><br />
+		<br />
+		<a href="https://m.kugou.com/">酷狗音乐</a><br />
+		<br />
+		<a href="https://m.ximalaya.com/">喜马拉雅</a><br />
+		<br />
+		</td>
+	</tr>
+	<tr>
+		<td class="style1" style="width: 492px"><br />
+		游戏：<br />
+		</td>
+		<td class="style1"><br />
+		游戏：<br />
+		</td>
+	</tr>
+	<tr>
+		<td class="style1" style="width: 492px">更新中……</td>
+		<td class="style1">更新中……</td>
+	</tr>
+	<tr>
+		<td class="style1" style="width: 492px">&nbsp;</td>
+		<td class="style1">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style1" style="width: 492px">&nbsp;</td>
+		<td class="style1">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style1" style="width: 492px">&nbsp;</td>
+		<td class="style1">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style1" style="width: 492px">&nbsp;</td>
+		<td class="style1">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style1" style="width: 492px">&nbsp;</td>
+		<td class="style1">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style1" style="width: 492px">&nbsp;</td>
+		<td class="style1">&nbsp;</td>
+	</tr>
+</table>
+<p>新手上路，各方面均不熟悉，多多担待啦~</p>
+<p>声明：所有软件均为官网地址，点击相应软件跳转到官网下载，如果侵犯了您的隐私或产权，请联系我（848387558@qq.com)删除，并接受我的道歉。</p>
 
-```markdown
-Syntax highlighted code block
+</body>
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yunfeng06/yunfeng06.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</html>
