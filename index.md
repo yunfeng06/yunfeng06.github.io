@@ -1,5 +1,5 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
@@ -9,7 +9,7 @@
 
 <body>
 
-<p class="style1">小杜的网站~（更新中）</p>
+<p class="style1">                     小杜的网站~（更新中）</p>
 <table style="width: 90%; height: 172px" align="center">
 	<tr>
 		<td class="style1" style="height: 34px; width: 492px;">电脑软件</td>
