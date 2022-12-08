@@ -11,9 +11,9 @@
 <body>
  <script>
  if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-    window.location.href = "shouji-1.html";
+    window.location.href = "shouji.html";
 } else {
-  window.location.href = "diannao-1.html";
+  window.location.href = "diannao.html";
 }
 </script>
 
