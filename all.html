@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义搜索引擎</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #search-container {
+            margin-bottom: 30%;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        #suggestions {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: absolute;
+            top:40%;
+        }
+
+        #engine-selector {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #333;
+            font-size: 16px;
+            /* 隐藏默认下拉箭头 */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            /* 自定义下拉箭头 */
+
+        }
+
+        /* 自定义下拉菜单 */
+        #engine-selector option {
+            padding: 10px;
+            background-color: #fff;
+            color: #333;
+            border: none;
+        }
+
+        #engine-selector option:hover {
+            background-color: #f5f5f5;
+        }
+
+        #search-input {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+        #search-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #search-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 下拉菜单的动画 */
+        #engine-selector option {
+            transition: all 0.3s ease;
+            transform: translateY(10px);
+            opacity: 0;
+        }
+
+        #engine-selector option:checked,
+        #engine-selector option:hover {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div id="search-container">
+    <select id="engine-selector">
+        <option value="https://www.baidu.com/s?ie=UTF-8&wd=%s">百度</option>
+        <option value="https://fanyi.baidu.com/mtpe-individual/multimodal?query=%s">百度翻译</option>
+        <option value="https://wiki.biligame.com/ys/%s">原神WiKi</option>
+        <option value="https://wiki.biligame.com/ys/%s/攻略#角色定位">原神攻略</option>
+        <option value="https://www.bing.com/search?q=%s">Bing</option>
+        <option value="https://www.google.com/search?q=%s">Google</option>
+    </select>
+    <input type="text" id="search-input" placeholder="搜索...">
+    <button id="search-button">搜索</button>
+</div>
+<div id="suggestions" style="display: none;"></div>
+
+</body>
+<script>
+    document.getElementById('search-button').addEventListener('click', performSearch);
+    document.getElementById('search-input').addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+            performSearch();
+        }
+    });
+
+    function performSearch() {
+        const input = document.getElementById('search-input');
+        const engineSelector = document.getElementById('engine-selector');
+        const query = input.value.trim();
+
+        if (query === '') {
+            alert('请输入搜索内容');
+            return;
+        }
+
+        const url = engineSelector.value.replace('%s', encodeURIComponent(query));
+        window.location.href = url;
+    }
+
+    window.handleResponse = function(data) {
+        showSuggestions(data.s);
+    };
+
+    const searchInput = document.getElementById('search-input');
+    const suggestions = document.getElementById('suggestions');
+    let timeoutId;
+
+    searchInput.addEventListener('input', function() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            fetchSuggestions(searchInput.value);
+        }, 500);
+    });
+
+    // JSONP 安全加载函数
+    function safeEvalScript(scriptUrl, callbackName) {
+        const script = document.createElement('script');
+        script.src = scriptUrl;
+        script.async = true;
+        script.onload = script.onerror = () => {
+            // 清理回调函数，防止内存泄漏
+            // delete window[callbackName];
+            // 移除 script 标签
+            document.head.removeChild(script);
+        };
+        document.head.appendChild(script);
+    }
+
+    function fetchSuggestions(query) {
+        if (query.trim() === '') {
+            hideSuggestions();
+            return;
+        }
+
+        const url = 'https://suggestion.baidu.com/su?wd=' + encodeURIComponent(query) + '&cb=handleResponse'; // 添加cb参数
+        safeEvalScript(url, 'handleResponse');
+    }
+
+    function showSuggestions(datas) {
+        suggestions.innerHTML = '';
+        datas.forEach((suggestion) => {
+            const div = document.createElement('div');
+            div.textContent = suggestion;
+            div.classList.add('suggestion');
+            // 仅在不是最后一个项目时添加分割线
+            if (datas.indexOf(suggestion) < datas.length - 1) {
+                div.style.borderBottom = '1px solid gray';
+            }
+            div.addEventListener('click', () => {
+                searchInput.value = suggestion;
+                //hideSuggestions();
+            });
+            // 添加悬停相应，设置背景和文字颜色
+            div.addEventListener('mouseover', () => {
+                div.style.backgroundColor = 'lightgray';
+                div.style.color = 'black';
+            });
+            // 添加悬停离开相应，恢复背景和文字颜色
+            div.addEventListener('mouseout', () => {
+                div.style.backgroundColor = 'white';
+                div.style.color = 'black';
+            });
+            suggestions.appendChild(div);
+        });
+        suggestions.style.display = 'block';
+    }
+
+    function hideSuggestions() {
+        suggestions.style.display = 'none';
+    }
+
+    // 初始化时隐藏联想词
+    hideSuggestions();
+
+    //选择select后将输入焦点移动至input内
+    document.getElementById("engine-selector").addEventListener("change", function() {
+        document.getElementById("search-input").focus();}
+    );
+</script>
+</html>
